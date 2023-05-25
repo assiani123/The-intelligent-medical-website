@@ -1,0 +1,32 @@
+<div *ngFor="let n of k">
+    <div *ngIf="c==n.nome" class="col-lg-6 mb-4">
+        <div *ngIf="c==n.nome" class="card bg-info text-white shadow">
+            <div *ngIf="c==n.nome" class="card-body">
+                {{n.mesg}}
+            </div>
+        </div>
+    </div>
+    <div *ngIf="'cm'==n.nome" class="col-lg-6 mb-4 r">
+        <div *ngIf="'cm'==n.nome" class="card bg-success text-white shadow">
+            <div *ngIf="'cm'==n.nome" class="card-body">
+                {{n.mesg}}
+            </div>
+        </div>
+    </div>
+
+</div>
+<div *ngIf="l>5" class="col-lg-6 mb-4 r">
+    <div *ngIf="l>5" class="card bg-success text-white shadow">
+        <div *ngIf="l>5" class="card-body">
+            hh
+            hh
+            hh
+        </div>
+    </div>
+</div>
+
+<form #f="ngForm" (ngSubmit)="po(f)">
+
+    <textarea name="mesg" cols="50" rows="3" ngModel #m="ngModel" placeholder="Ecrire votre message..."></textarea>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>
